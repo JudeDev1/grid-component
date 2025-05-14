@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-yellow: hsl(71, 73%, 54%);
+
+    /*### Neutral*/
+
+    --Light-gray: hsl(204, 43%, 93%);
+    --Grayish-blue: hsl(218, 22%, 67%);
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    background-color: var(--Light-gray);
+    padding: 1.25rem;
+}
+
+.btn {
+    background-color: var(--Bright-yellow);
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5 rem;
+    border-radius: 0.3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 50px;
+    width: 100%;
+    margin-top: 2.8rem;
+}
+
+p,
+li {
+    line-height: 1.6;
+    color: white;
+    opacity: 0.6;
+}
+
+p.green {
+    color: var(--Bright-yellow);
+    font-weight: 700;
+    
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 0.625rem;
+}
+
+.container > article:first-child {
+    padding: 2rem;
+}
+
+.container > article:first-child h1{
+    color: var(--Cyan);
+    margin-bottom: 1rem;
+}
+
+.container > article:first-child p{
+    margin-bottom: 1rem;
+}
+
+.container > article:first-child p:last-child {
+    color: var(--Grayish-blue);
+}
+
+.container section {
+    display: flex;
+    flex-direction: column;
+}
+
+.container section article{
+    padding: 2rem;
+    color: #fff;
+}
+
+.container section article:first-child {
+    background-color: hsl(179, 67%, 42%);
+}
+
+.container section article:first-child h2 {
+    margin-bottom: 2rem;
+}
+
+.container section article:first-child h3 {
+    font-size: 1rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+.container section article:first-child h3 span {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.container section article:first-child p {
+    margin-bottom: 1rem 0;
+}
+
+.container section article:last-child {
+    background-color: hsl(179, 62%, 49%);
+    border-bottom-left-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+}
+
+.container section article:last-child h2 {
+    margin-bottom: 1rem;
+}
+
+@media(min-width: 768px) {
+    body{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .container{
+        width: 700px;
+        margin: auto;
+    }
+    .container > article:first-child h1{
+        font-size: 2rem;
+    }
+
+    .container section {
+        flex-direction: row;
+    }
+
+    .container section article:first-child {
+        flex: 1;
+        border-bottom-left-radius: 0.625rem;
+    }
+
+    .container section article:last-child {
+        flex: 1;
+        border-bottom-right-radius: 0.625rem;
+        border-bottom-left-radius: 0;
+    }
+}
+
